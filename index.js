@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
   const clientIP = getClientIP(req);
   getClientLocation(clientIP).then(location => {
     console.log(location)
-    res.send(location);
+    res.send("测试一下");
   }).catch(error => {
     res.status(500).send(error);
   });
