@@ -8,7 +8,7 @@ function getClientIP(req) {
 // 获取访问者位置的函数
 async function getClientLocation(ip) {
   try {
-    const response = await axios.get(`http://ipinfo.io/${ip}/json`);
+    const response = await axios.get(`https://get.geojs.io/v1/ip/geo/${ip}.json`);
     return response.data;
   } catch (error) {
     console.error(`Error fetching location for IP ${ip}:`, error);
